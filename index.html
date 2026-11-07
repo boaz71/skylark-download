@@ -27,6 +27,12 @@ table { width: 100%; border-collapse: collapse; }
 td { padding: 3px 0; vertical-align: top; }
 td:first-child { width: 150px; }
 footer { text-align: center; color: var(--dim); font-size: 14px; margin-top: 28px; }
+.games { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.games a { display: block; padding: 10px 14px; border-radius: 6px; background: #0006; border: 1px solid #fff2;
+           color: var(--text); text-decoration: none; }
+.games a:hover { border-color: #fff6; }
+.games b { display: block; font: 20px Impact, "Arial Black", sans-serif; letter-spacing: 1px; direction: ltr; text-align: right; }
+.games span { color: var(--dim); font-size: 15px; }
 </style>
 </head>
 <body>
@@ -70,6 +76,13 @@ footer { text-align: center; color: var(--dim); font-size: 14px; margin-top: 28p
       <tr><td><kbd>M</kbd> / <kbd>H</kbd></td><td>מפה / תצוגת נתונים</td></tr>
       <tr><td><kbd>ESC</kbd></td><td>השהיה</td></tr>
     </table>
+  </section>
+  <section>
+    <h2>עוד משחקים שלנו</h2>
+    <div class="games">
+    <a href="http://16.192.246.15:27500/"><b>IRONCRYPT ARENA</b><span>משחק יריות זירה מהיר בסגנון ה-90, ברשת או מול בוטים</span></a>
+    <a href="https://boaz71.github.io/hold-the-line-download/"><b>HOLD THE LINE</b><span>מקלען במלחמת העולם השנייה מול חמישה גלי התקפה וטנקים</span></a>
+    </div>
   </section>
   <footer>דורש Windows 10/11 · לשחקן יחיד, בלי צורך באינטרנט</footer>
 </main>
