@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skylark Flight Simulator</title>
-<meta name="description" content="סימולטור טיסה חינמי ל-Windows: המראה, נחיתה, טיסה חופשית ומצב צפייה במטוס קל מעל אי עם הרים ושני שדות תעופה.">
+<meta name="description" content="סימולטור טיסה חינמי ל-Windows: חמישה מטוסים, שמונה שדות תעופה בארבעה אזורים בעולם, המראה, נחיתה, טיסת יעד, טיסה חופשית וטיסת לילה.">
 <style>
 :root { --bg: #0b1420; --panel: #13202f; --line: #2a3f57; --sky: #8cc4f0; --gold: #f2c464; --text: #e6edf4; --dim: #9db0c3; }
 * { box-sizing: border-box; }
@@ -38,7 +38,7 @@ footer { text-align: center; color: var(--dim); font-size: 14px; margin-top: 28p
 <body>
 <main>
   <h1>SKYLARK</h1>
-  <p class="tag">המטוס שלך, האי שלך. סימולטור טיסה חינמי ל-Windows</p>
+  <p class="tag">חמישה מטוסים, שמונה שדות תעופה. סימולטור טיסה חינמי ל-Windows</p>
   <video src="trailer.mp4" controls playsinline preload="metadata"></video>
   <a class="btn" href="https://github.com/boaz71/skylark-download/releases/latest/download/Skylark.zip">הורדה למחשב Windows<small>Skylark.zip · בערך 38MB · הורדה מאובטחת מ-GitHub</small></a>
   <section>
@@ -46,19 +46,21 @@ footer { text-align: center; color: var(--dim); font-size: 14px; margin-top: 28p
     <ol>
       <li>מורידים את ה-ZIP ופותחים אותו לתיקייה (קליק ימני ← Extract All).</li>
       <li>מפעילים את <code>Skylark.exe</code>. אם Windows מציג "Windows protected your PC", לוחצים <b>More info</b> ואז <b>Run anyway</b>. האזהרה מופיעה כי המשחק לא חתום בתעודה מסחרית.</li>
-      <li>בוחרים מצב משחק, שדה תעופה, רוח ושעה ביום, וממריאים.</li>
+      <li>בוחרים מצב משחק, אזור, שדה תעופה, מטוס, רוח ושעה ביום, וממריאים.</li>
     </ol>
   </section>
   <section>
     <h2>מה יש במשחק</h2>
     <ul>
+      <li><b>חמישה מטוסים:</b> מטוס הדרכה, מטוס שטח להמראות קצרות, מטוס טיולים מהיר, טורבו-פרופ דו-מנועי וסילון קל, לכל אחד מהירויות ולוח מחוונים משלו</li>
+      <li><b>ארבעה אזורים, שמונה שדות:</b> האי Skylark, טירול (אינסברוק וצל אם זה), הקריביים (סנט מארטן וסנט בארת') והנגב וים סוף (רמון ואילת)</li>
       <li><b>המראה:</b> מהמסלול ועד 1,000 רגל מעל השדה, עם ציון על הביצוע</li>
       <li><b>נחיתה:</b> מגישה ארוכה, מגישה קצרה או מצלע הרוח, עם ציון על קצב השקיעה, מקום הנגיעה וקו האמצע</li>
+      <li><b>טיסת יעד:</b> ממריאים, מנווטים לשדה השני באזור לפי קו הניווט במפה, ונוחתים שם</li>
       <li><b>טיסה חופשית:</b> בלי משימה, לאן שרוצים, עם טייס אוטומטי</li>
       <li><b>מצב צפייה:</b> הטייס האוטומטי טס בין השדות והמצלמות מתחלפות לבד, ובכל רגע אפשר לקחת פיקוד</li>
-      <li>אי עם הרים מושלגים, יערות, כפרים וחוף, ושני שדות תעופה: אחד ליד הים ואחד בעמק בין ההרים</li>
-      <li>מודל טיסה עם הזדקרות, מדפים, טרים, רוח צד ומשבים, ולוח מחוונים מלא בתא הטייס</li>
-      <li>אורות PAPI על המסלול ופסי הנחיה על המסך, בוקר, צהריים או שקיעה</li>
+      <li><b>טיסת לילה:</b> אורות מסלול וגישה, ערים מוארות ופנס נחיתה, וגם בוקר, צהריים או שקיעה</li>
+      <li>מודל טיסה עם הזדקרות, מדפים, טרים, גלגלים מתקפלים, רוח צד ומשבים, ולוח מחוונים מלא בתא הטייס</li>
     </ul>
   </section>
   <section>
@@ -69,6 +71,7 @@ footer { text-align: center; color: var(--dim); font-size: 14px; margin-top: 28p
       <tr><td><kbd>Q</kbd> / <kbd>E</kbd></td><td>הגה כיוון (ועל הקרקע: היגוי)</td></tr>
       <tr><td><kbd>SHIFT</kbd> / <kbd>CTRL</kbd></td><td>הוספת גז / הורדת גז</td></tr>
       <tr><td><kbd>F</kbd> / <kbd>R</kbd></td><td>הורדת מדפים / הרמת מדפים</td></tr>
+      <tr><td><kbd>L</kbd></td><td>הרמת / הורדת גלגלים (במטוסים עם גלגלים מתקפלים)</td></tr>
       <tr><td><kbd>SPACE</kbd> / <kbd>B</kbd></td><td>בלמים / בלם חניה</td></tr>
       <tr><td><kbd>T</kbd> / <kbd>G</kbd></td><td>טרים אף למעלה / למטה</td></tr>
       <tr><td><kbd>C</kbd> / <kbd>V</kbd></td><td>החלפת מצלמה / תא טייס</td></tr>
